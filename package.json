@@ -1,0 +1,24 @@
+{
+  "name": "pollyglot",
+  "version": "1.0.0",
+  "description": "An app that helps with translating",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Muhsin101/Pollyglot.git"
+  },
+  "author": "Muhsin101",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Muhsin101/Pollyglot/issues"
+  },
+  "homepage": "https://github.com/Muhsin101/Pollyglot#readme",
+  "dependencies": {
+    "dotenv": "^17.4.2",
+    "openai": "^6.35.0"
+  }
+}
