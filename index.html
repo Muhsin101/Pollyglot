@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Milingo</title>
+    <link rel="stylesheet" href="index.css" />
+  </head>
+  <body>
+    <div class="header">
+      <div class="left-side-header">
+        <img class="logo" src="assets/logo1.png" />
+        <h1>Milingo</h1>
+      </div>
+      <div class="right-side-header">
+        <button>Settings</button>
+      </div>
+    </div>
+    <div class="main-container">
+      <div class="lang-option-section">
+        <button class="arab-btn">🇸🇦Arabic</button>
+        <button class="jap-btn">🇯🇵Japanese</button>
+        <button class="esp-btn">🇪🇸Spanish</button>
+      </div>
+      <form id="translate-form" class="translate-form">
+        <div class="input-container">
+          <textarea
+            id="user-input"
+            placeholder="Milo is here to assist!"
+          ></textarea>
+        </div>
+
+        <div class="button-container">
+          <button type="submit" id="translate-button" class="translate-btn">
+            <span class="btn-text">✨Translate</span>
+          </button>
+        </div>
+      </form>
+      <div class="translate-section"></div>
+    </div>
+    <div class="footer"></div>
+    <script type="module" src="index.js"></script>
+  </body>
+</html>

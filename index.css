@@ -1,0 +1,81 @@
+/*
+HEADER
+*/
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 50px;
+}
+
+.left-side-header {
+    display: flex;
+    align-items: center;
+}
+
+.left-side-header > .logo {
+    width: 100px;
+}
+
+
+/*
+MAIN
+*/
+.main-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 100px 0 100px;
+}
+
+/*
+LANG OPTION
+*/
+.lang-option-section {
+    border-radius: 10px;
+    border-color: red;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.lang-option-section > button {
+    width: 150px;
+    line-height: 50px;
+    background-color: white;
+    border-color: grey;
+    border-radius: 5px;
+}
+
+.lang-option-section > .jap-btn {
+    margin: 10px 0 10px 0;
+}
+
+/*
+INPUT SECTION
+*/
+
+.input-section {
+    border-radius: 10px;
+    border-color: red;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.input-section > .input-container > input {
+    width: 800px;
+    height: 200px;
+}
+
+.input-section > .translate-container > button {
+    margin-top: 15px;
+    width: 200px;
+    padding: 10px 0 10px 0;
+    align-self: center;
+}
+
+
+
