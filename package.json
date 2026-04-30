@@ -19,6 +19,7 @@
   },
   "homepage": "https://github.com/Muhsin101/Pollyglot#readme",
   "dependencies": {
+    "cors": "^2.8.6",
     "dompurify": "^3.4.2",
     "dotenv": "^17.4.2",
     "express": "^5.2.1",

@@ -1,6 +1,3 @@
-import { marked } from "marked";
-import DOMPurify from "dompurify";
-
 const userInput = document.getElementById("user-input");
 const translateBtn = document.getElementById("translate-btn");
 const outputEl = document.getElementById("output-container");
@@ -47,6 +44,8 @@ async function handleTranslationRequest(e) {
     });
 
     const data = await response.json();
+    const { translatedText } = data;
+    console.log(data);
 
     const unsafeHTML = marked.parse(data.translatedText);
     const safeHTML = DOMPurify.sanitize(unsafeHTML);
