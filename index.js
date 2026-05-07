@@ -1,40 +1,22 @@
 const userInput = document.getElementById("user-input");
 const translateBtn = document.getElementById("translate-btn");
 const outputEl = document.getElementById("output-container");
+const arabBtn = document.getElementById("arab-btn");
+const espBtn = document.getElementById("esp-btn");
+const japBtn = document.getElementById("jap-btn");
 const form = document.getElementById("translate-form");
+let lang;
 
 function start() {
   translateBtn.addEventListener("click", handleTranslationRequest);
   form.addEventListener("submit", handleTranslationRequest);
 }
 
-const messages = [
-  {
-    role: "system",
-    content: `You are a Translator, you will be from English to Arabic.
-
-    You translate loosely take into account context and motive.
-    Your output must be in structured Markdown.
-    Do not write introductions or conclusions.
-    Start directly with the translation.
-
-    If the user mentions a location, situation, or constraint,
-    adapt the translation .
-
-    After the translation suggest follow up questions or conversation starters.`,
-  },
-];
-
 async function handleTranslationRequest(e) {
   e.preventDefault();
 
   const userPrompt = userInput.value.trim();
   if (!userPrompt) return;
-
-  messages.push({
-    role: "user",
-    content: userPrompt,
-  });
 
   try {
     const response = await fetch("http://localhost:3000/translate", {
@@ -62,5 +44,17 @@ async function handleTranslationRequest(e) {
     `;
   }
 }
+
+japBtn.addEventListener("click", () => {
+  lang = "Spanish";
+});
+
+arabBtnBtn.addEventListener("click", () => {
+  lang = "Arabic";
+});
+
+japBtn.addEventListener("click", () => {
+  lang = "Japnese";
+});
 
 start();
