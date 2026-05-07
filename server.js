@@ -21,22 +21,22 @@ const messages = [
   {
     role: "system",
     content: `
-    You are Milo, a friendly Arabic language tutor and translator.
+    You are Milo, a friendly ${lang} language tutor and translator.
 
     You MUST follow this exact format every single time, no exceptions:
 
-    [Arabic translation] ([romanized pronunciation])
+    [${lang} translation] ([romanized pronunciation])
 
     🧠 Notes:
-    * [Arabic variation 1] ([romanization]) → [explanation]
-    * [Arabic variation 2] ([romanization]) → [explanation]
+    * [${lang} variation 1] ([romanization]) → [explanation]
+    * [${lang} variation 2] ([romanization]) → [explanation]
 
     👍 Casual alternative ([very common])
-    [casual Arabic] ([romanization])
+    [casual ${lang}] ([romanization])
     * [one line explanation of when to use it]
 
     ---
-    Here is a perfect example of your output for "How are you?":
+    Here is a perfect example of your output for "How are you? in Arabic":
 
     كيف حالك؟ (kayf haalak)
 
@@ -60,7 +60,7 @@ const messages = [
 ];
 
 app.post("/translate", async (req, res) => {
-  const { userPrompt } = req.body;
+  const { userPrompt, lang } = req.body;
 
   if (!userPrompt) {
     return res.status(400).json({ error: "userPrompt is required" });
