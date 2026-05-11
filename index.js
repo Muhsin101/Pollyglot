@@ -49,7 +49,7 @@ japBtn.addEventListener("click", () => {
   lang = "Spanish";
 });
 
-arabBtnBtn.addEventListener("click", () => {
+arabBtn.addEventListener("click", () => {
   lang = "Arabic";
 });
 

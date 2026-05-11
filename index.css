@@ -6,3 +6,41 @@ body {
     margin-top: 50px;
     margin-bottom: 50px;
 }
+
+/*
+SETTINGS DROPDOWN
+*/
+.settings-wrapper {
+  position: relative; /* anchor for the dropdown */
+  display: inline-block;
+}
+
+.dropdown {
+  position: absolute;
+  top: calc(100% + 6px); /* just below the button */
+  left: 0;              /* align to the left edge */
+  display: none;         /* hidden by default */
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 4px;
+  width: 200px;
+  z-index: 10;
+}
+
+.dropdown.open {
+  display: block; /* shown when toggled */
+}
+
+/*
+HEADER SECTION
+*/
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header > .profile-btn > .profile-icon {
+    width: 100px;
+}
